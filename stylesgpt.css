@@ -1,0 +1,17 @@
+.header {
+  background-image: linear-gradient(to left, #0b0e10, #101518);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+.header-right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header-right a {
+  padding: 0 0 0 16px;
+  margin-right: 48px;
+}

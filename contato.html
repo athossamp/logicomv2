@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesContato.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet" />
+    <title>Logicom Tecnologia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header-left">
+          <a href="index.html"><img src="images/logo.svg" style="height: 60px" /></a>
+        </div>
+        <div class="header-right">
+          <a class="inicio" href="index.html">Home</a>
+          
+          <a class="inicio" href="produtos.html">Produtos</a>
+          <div class="dropdown">
+            <button class="inicio dropbtn">
+              Segmentos
+            </button>
+            <div class="dropdown-content">
+              <a  href="mercado.html">Supermercadista</a>
+              <a  href="hotelaria.html">Hotelaria e serviços</a>
+              <a  href="restaurante.html">Restaurante</a>
+            </div>
+          </div>
+          <a class="inicio" href="gestao.html">Gestão</a>
+          <a class="inicio" href="contato.html">Contato<hr class="selected-link"/></a>
+          <div class="highlight-inicio">
+        <a class="cliente" href="login.php">Area do cliente</a>
+        </div>
+        </div>
+      </div>
+      <button id="burgerButton" class="burger-button" type="button">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+  
+      <div id="burgerMenu" class="burger-menu hidden">
+        <ul class="nav-items">
+          <li class="nav-item"><a class="nav-link" href="index.html">Logicom</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="mercado.html">Supermercadista</a></li>
+          <li class="nav-item"><a class="nav-link" href="restaurante.html">Restaurante</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotelaria.html">Hotelaria e Serviços</a></li>        
+          <li class="nav-item"><a class="nav-link" href="gestao.html">Gestão</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php">Área do cliente</a></li>
+      </div>
+    </header>
+<main>
+  <div class="form-insercao">
+    <div>
+      <h1>Entre em contato</h1> <br /><br />
+    </div>
+    <form action="https://formspree.io/f/mjvzgdko" method="POST">
+      <label>Nome:*</label><br />
+      <input class="usuario-solicitante" rows="2" maxlength="200" required/><br /><br />
+
+      <label>Email:*</label><br />
+      <input class="usuario-solicitante" required/><br /><br />
+      <label>Contato:*</label><br />
+      <input type="text" class="usuario-solicitante" placeholder="(91) 9-0000-0000" required/><br /><br />
+      <label>Mensagem:*</label><br />
+      <textarea class="usuario-solicitante" rows="10" cols="30" required></textarea><br /><br />
+      <div class="button-submit-direction">
+        <input class="button-submit" type="submit" value="Enviar" /><br />
+      </div>
+      
+    </form>
+  </div> 
+</main>
+<img class="onda-logicom" src="images/Logicom ondas.png" />
+    <footer>
+      <div class="footer">
+        <div class="left-footer"><a href="index.html"><img src="images/logo.svg" style="height: 60px" /></a></div>
+        <div class="middle-footer">
+          <a href="https://www.linkedin.com/company/logicom-tecnologia/mycompany/"><img src="images/footer-linkedin.png" style="height: 60px" /></a>
+          <a href="https://www.instagram.com/logicomtec/"><img src="images/instagram-header.png" style="height: 60px" /></a>
+          <a href="https://www.facebook.com/logicomtec"><img src="images/facebook-header.png" style="height: 60px" /></a>
+        </div>
+        <div class="right-footer">Logicom © 2023</div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Example</title>
+
+
+  </head>
+  <body>
+    <ul>
+      <li>
+      <div id="1" class="projectTitel">
+        <h1>Project: a</h1>
+     </div>
+  <div id="projectInhoudEen" class="projectInhoud" > content a</div>
+</li>
+
+     <div id="2" class="projectTitel">
+        <h1>Project: b</h1>
+     </div>
+  <div id="projectInhoudTwee" class="projectInhoud"> content b</div>
+
+     <div id="3" class="projectTitel">
+        <h1>Project: c</h1>
+     </div>
+  <div id="projectInhoudDrie" class="projectInhoud"> content c</div>
+    </ul>
+
+  <script>
+   var divs = document.getElementsByClassName("projectTitel");
+
+[...divs].forEach(someDiv => someDiv.addEventListener("click", handler));
+
+// by default, all projectInHound are hidden
+hideElements("projectInhoud");
+
+
+function handler(event) {
+    // get the clicked project's index :
+    var projectIndex = getClickedProjectIndex(event);
+
+    // toggle the right projectInhoud div :
+    toggleDiv(document.getElementsByClassName("projectInhoud")[projectIndex]);
+}
+
+// hide all elements that have the provided class name
+function hideElements(className) {
+    var elements = document.getElementsByClassName(className);
+
+    [...elements].forEach(element => element.style.display = "none");
+}
+
+function getClickedProjectIndex(event) {
+    var elements = document.getElementsByClassName("projectTitel");
+    var projectIndex = 0;
+
+    [...elements].forEach((element, index) => {
+        if (element.id == event.currentTarget.id) {
+            projectIndex = index;
+        }
+    });
+
+    return projectIndex;
+}
+
+function toggleDiv(element) {
+
+   if (element.style.display === 'none') {
+      element.style.display = 'block';
+   } else {
+      element.style.display = 'none';
+   }
+}
+
+</script>
+</html>

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+ul {
+  list-style-image: url("./images/share-solid.svg");
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.highlight-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #f58220;
+  margin-right: 12px;
+}
+.cliente {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.header {
+  height: 100px;
+  background-image: linear-gradient(to left, #0b0e10, #101518);
+}
+.header-left {
+  position: relative;
+  background-color: #0b0e10;
+  color: whitesmoke;
+  z-index: 3;
+  background-image: linear-gradient(to left, #0b0e10, #101518);
+  width: 100%;
+}
+.header-left img {
+  margin: 8px 0 0 36px;
+}
+.header-right {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
+  float: right;
+  margin-top: 35px;
+  z-index: 1;
+}
+.inicio {
+  padding: 0 0 0 16px;
+  margin: 16px 60px 16px 0;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.3vw;
+  z-index: 1;
+  transition: 0.25s;
+}
+.inicio:hover {
+  color: rgb(231, 120, 23);
+}
+.dropbtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0b0e10;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #0b0e10;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  color: rgb(231, 120, 23);
+}
+
+.bem-vindo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 12px;
+  text-align: center;
+}
+.bem-vindo-texto {
+  width: 50%;
+  font-size: 36px;
+  font-weight: bolder;
+}
+.bem-vindo-texto p {
+  font-size: 24px;
+  font-weight: normal;
+}
+.bem-vindo-texto hr {
+  width: 80%;
+  margin: 0 auto;
+}
+.bem-vindo-button button {
+  font-size: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f58220;
+  font-weight: bold;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.bem-vindo-button button:hover {
+  background-color: #bb8a44;
+}
+
+.onda-logicom {
+  position: fixed;
+  width: 60%;
+  right: 0;
+  bottom: 10vw;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #101518;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 140px;
+  width: 100%;
+}
+.right-footer {
+  font-size: 2vw;
+  font-family: "Montserrat", sans-serif;
+}

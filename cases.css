@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+}
+ul {
+  list-style: none;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+flex-direction: column;
+}
+/* botão burger */
+.burger-button {
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  cursor: pointer;
+  transition: 0.25s;
+  transition-delay: 0.05s;
+}
+
+.burger-button--active {
+  transform: rotateZ(90deg);
+  box-shadow: 0 0 0 4px rgba(155, 155, 155, 0.4);
+}
+
+.line {
+  width: 20px;
+  border-top: 2px solid rgb(241, 112, 0);
+}
+
+.line:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.burger-menu {
+  background-color: white;
+  transition:  0.5s;
+  overflow: auto;
+  height: 180px;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  text-align: center;
+  
+  list-style-type: none;
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 8px;
+}
+.nav-link a {
+  color: white;
+}
+
+.nav-item:first-child {
+  border-bottom: 3px solid rgb(241, 112, 0);
+}
+
+.hidden {
+  height: 0;
+}
+/* fim do botão burger */
+
+.header-left {
+  position: relative;
+  background-color: #0b0e10;
+  color: whitesmoke;
+  z-index: 3;
+  background-image: linear-gradient(to left, #0b0e10, #101518);
+  width: 100%;
+}
+.header-left img {
+  margin: 8px 0 0 36px;
+}
+.header-right {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
+  float: right;
+  margin-top: 35px;
+  z-index: 1;
+}
+.inicio {
+  padding: 0 0 0 16px;
+  margin: 16px 60px 16px 0;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.3vw;
+  z-index: 1;
+  transition: 0.25s;
+}
+.inicio:hover {
+  color: rgb(231, 120, 23);
+}
+.dropbtn {
+  cursor: pointer;
+  background-color: #0b0e10;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0b0e10;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ background-color: #0b0e10;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  color: rgb(231, 120, 23);
+}
+.cases-content {
+  padding-top: 80px;
+  display: inline-block;
+
+}
+
+.cases-content-left {
+padding: 64px 96px 0 96px;
+font-size: 1.2vw;
+font-weight: bolder;
+text-align: justify;
+text-justify: inter-word;
+}
+.cases-content-center {
+text-align: center;
+}
+.cases-content-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10% 20%;
+  font-size: 1.2vw;
+  font-weight: bolder;
+}
+.cases-content-list-li {
+  padding: 0 16px;
+  width: 50%;
+}
+.case-content {
+  border-radius: 8%;
+}
+.case-content img {
+  float: right;
+}
+.case-content-autor {
+  display: inline-block;
+}
+.case-content-nome {
+  float: left;
+  padding: 16px;
+}
+
+.case-content-avatar {
+  width: 30%;
+  padding: 10px;
+  float: right;
+  bottom: 10px;
+}
+.onda-logicom {
+  position: fixed;
+  width: 60%;
+  right: 0;
+  bottom: 10vw;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #101518;
+  color: white;
+  height: 150px;
+}
+@media screen and (min-width: 768px) {
+  .burger-button, .burger-menu {
+    display: none
+    
+  }
+}
+@media screen and (max-width: 769px) {
+  header {
+    width: 100%;
+    background-color: #0b0e10;
+  }
+  .burger-menu {
+    background-color: #0b0e10;
+    
+  }
+  .nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .header-right {
+    display: none;
+    max-width: 100%;
+  }
+  .cases-content-left {
+    width: 90%;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 0;
+    font-size: 2.5vw;
+  }
+  .cases-content-list {
+    flex-direction: column;
+    margin: 0 inherit;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cases-content-list hr {
+    width: 200px;
+  }
+  .cases-content-list img {
+    width: 180%;
+  }
+  .cases-content-list p {
+    font-size: 2.2vw;
+    position: absolute;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 40%;
+  }
+  .case-content-nome {
+    position: relative;
+    padding-top: 45px;
+  }
+  .case-content-avatar{
+    width: 30%;
+    position: relative;
+    left: 125px;
+  }
+  .onda-logicom {
+    display: none;
+  }
+  
+}

@@ -1,0 +1,98 @@
+sistema kanban logicom {
+data e hora inicio / fim
+funcionário atribuído
+numero da rotina(opcional)
+descrição
+inicio/emdesenvolvimento/finalizado
+empresa
+		
+
+data e hora inicio / fim
+numero da rotina(opcional)
+descrição
+empresa
+}
+
+	duvidas:
+		como chegar até a tela impedindo a entrada de funcionarios fora da logicom (enum de nivel de usuario)
+		"Área interna"
+	USER
+		-> Nome
+		-> Email
+		-> Senha
+		-> Pode editar
+			-> Finalizar
+			-> Em Desenvolvimento
+			-> Aberto
+			-> Após finalizar adicionar campo de relatório
+		-> Pode Cadastrar
+	TAREFA
+		-> Titulo
+		-> Aberto (default)
+		-> Descrição
+		-> Rotina (opcional)
+		-> Empresa
+		-> Data não aparece no cadastro, apenas na edição
+	EDITAR TAREFA
+		-> PROIBIR EDIÇÃO EM TAREFAS FINALIZADAS, ao alterar campo de em que andamento ta a tarefa adicionar um texto falando que se estiver finalizada nao será possível editar
+		-> Alterar todos os campos (apresentar um campo "editado em")
+		-> Obrigatório? relatório (apresentar motivos para eventual atraso)
+	
+	TELA COM TODAS AS TAREFAS
+		-> Filtro (
+		-> Titulo
+		-> Rotina (opcional)
+		-> Funcionario encarregado
+		-> Aberto/Des/Fin
+		-> Data início
+		-> Ultima edição
+		
+		
+FLUXO:
+	-> Registro [FEITO]
+	-> Login [FEITO]
+	-> Cadastro de TAREFA [FEITO]
+	-> Ver as tarefas [FEITO]
+	-> Editar tarefas [FEITO]
+	-> Ver tarefa completa [FEITO]
+	-> Filtrar tarefas por funcionario
+	-> Finalizar 
+		VER TAREFAS:
+			->Titulo;
+			->Resumo;
+			->Funcionario;
+			->Estado;
+			->Projeto;
+			->Rotina;
+	
+	AJUSTES:
+			-> Tarefa Completa ainda não possui UTF ENCODE/DECODE [FEITO]
+			-> Testar o seletor de rotina, está passando só o valor numerico apesar de pedir para passar o valor integral (NUM - DESC ROTINA) [feito/falta passar o valor pro banco também]
+					
+		-> FOREACH DO SELETOR DE ROTINA NÃO ESTÁ TRAZENDO O VALOR DO BANCO, está trazendo o primeiro valor e apresentando uma opção em branco entre cada rotina (Checar todos os dropdowns select option) [FEITO]
+		
+		-> limitar html quantidade de caracteres por input para titulo e resumo. [HTML] [0]
+		-> Fazer de tudo pra alinhar os dados do card [CSS][HTML] [0]
+		-> Ajustar view de mobile, reduzir a width ou aumentar a margin pra garantir que a pessoa possa mudar de aba (aberto, des, fin) sem problemas.		
+		-> checar se o campo de descrição na tarefa completa esta ultrapassando  o tamanho da tela ou se está tendo um wrap antes do fim da pagina
+		-> Pedir para todos os funcionarios se registrarem no link para receber o idUsuario e alimentar o dropdown com os nomes no child e o id no value [SERVIÇO]
+		-> checar se isso irá acontecer também no editor e no inserir [SERVIÇO]
+		
+		
+
+		-> Cobrar o felipe pra enviar um banco de dados com todos os projetos e gerar um insert pra mim [aguardando insert]
+		
+
+		-> ajustar estilização da tarefa completa/inserir tarefa/editor de tarefa 
+		
+		-> Ajustar botão área do cliente na aba de tarefas, ele não está sendo clicável, será pq os dois apontam pra um login.php?
+	perguntar pro nilson o que é as categoria tudo
+		-> Adicionar data/filtro de data
+	
+	
+	categoria?
+	projeto?
+	
+	
+	adicionar ultima edição no banco de dados (curdate quando editar)
+	adicionar ultimo usuario a ter editado (pegar session ID/Nome)
